@@ -8,10 +8,17 @@ function Card(props) {
             <img
                 className={style.CardImg}
                 src={props.image || placeholder}
-                alt="..."
+                alt="card image"
             ></img>
             <div className={style.CardBody}>
                 <h5 className={style.CardTitle}>{props.title}</h5>
+                <div className={style.TagList}>
+                    {props.tags.map((tag, i) => (
+                        <span key={i} className={`${style.Tag} ${style[tag]}`}>
+                            {tag}
+                        </span>
+                    ))}
+                </div>
                 <p>{props.content}</p>
                 <Button></Button>
             </div>

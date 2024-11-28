@@ -19,3 +19,33 @@
     font-size: 1.4rem;
     margin: 0.8rem 0;
 }
+
+.TagList {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 0.8rem;
+}
+
+.Tag {
+    line-height: 1.6rem;
+    text-align: center;
+    padding: 0 1rem;
+    border-radius: 12px;
+    color: white;
+}
+
+.Tag.html {
+    background-color: cornflowerblue;
+}
+
+.Tag.css {
+    background-color: mediumorchid;
+}
+
+.Tag.js {
+    background-color: mediumseagreen;
+}
+
+.Tag.php {
+    background-color: mediumturquoise;
+}
