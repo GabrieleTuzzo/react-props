@@ -1,22 +1,14 @@
 import style from './card.module.css';
 import Button from '../Button/Button';
+import placeholder from '../../assets/placeholder.webp';
 
-function Card() {
+function Card(props) {
     return (
         <div className={style.Card}>
-            <img
-                className={style.CardImg}
-                src="https://picsum.photos/600/400"
-                alt="..."
-            ></img>
+            <img className={style.CardImg} src={props.image} alt="..."></img>
             <div className={style.CardBody}>
-                <h5 className={style.CardTitle}>Card title</h5>
-                <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Ipsam magnam enim perferendis culpa maiores nobis! Nostrum
-                    aliquam cumque blanditiis maxime quo dignissimos, doloremque
-                    dolore optio id facere mollitia expedita quam!
-                </p>
+                <h5 className={style.CardTitle}>{props.title}</h5>
+                <p>{props.content}</p>
                 <Button></Button>
             </div>
         </div>

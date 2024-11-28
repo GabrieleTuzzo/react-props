@@ -1,19 +1,29 @@
 import './App.css';
 import Card from './components/Card/Card';
 import Footer from './components/Footer/Footer';
+import posts from './data/posts';
 
 function App() {
     return (
         <>
             <main>
-                <div class="container">
-                    <div class="row">
-                        <div class="col">
-                            <h1 class="main-title">Il mio blog</h1>
+                <div className="container">
+                    <div className="row">
+                        <div className="col">
+                            <h1 className="main-title">Il mio blog</h1>
                         </div>
-                        <div class="col-6">
-                            <Card></Card>
-                        </div>
+                        {posts.map((post) => (
+                            <div className="col-6">
+                                <Card
+                                    key={post.id}
+                                    title={post.title}
+                                    image={post.image}
+                                    content={post.content}
+                                    tags={post.tags}
+                                    published={post.published}
+                                ></Card>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </main>
