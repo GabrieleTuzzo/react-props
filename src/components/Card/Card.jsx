@@ -5,7 +5,11 @@ import placeholder from '../../assets/placeholder.webp';
 function Card(props) {
     return (
         <div className={style.Card}>
-            <img className={style.CardImg} src={props.image} alt="..."></img>
+            <img
+                className={style.CardImg}
+                src={props.image || placeholder}
+                alt="..."
+            ></img>
             <div className={style.CardBody}>
                 <h5 className={style.CardTitle}>{props.title}</h5>
                 <p>{props.content}</p>
