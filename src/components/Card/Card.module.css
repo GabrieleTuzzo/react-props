@@ -1,0 +1,21 @@
+.Card {
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.CardImg {
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.CardBody {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+    padding-top: 0;
+}
+
+.CardTitle {
+    font-size: 1.4rem;
+    margin: 0.8rem 0;
+}
